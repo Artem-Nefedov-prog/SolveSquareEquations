@@ -1,8 +1,13 @@
-//#pragma once
+#pragma once
 #ifndef SQUARE_H_
 #define SQUARE_H_
-#include "razdel_comp.c"
+#include <stdio.h>  ///< подключает заголовочный файл stdio.h
+#include <assert.h>
+#include <math.h>
+const double DOUBLE_RANGE = 0.00001; ///< Константа, содержащая значение минимального возможного отличия чисел типа double, при котором они будут различимы.
+int CompareTwoDouble(double number1, double number2);
 /// Набор возможных количетсв корней уравнения
+
 typedef enum
 {
     NO_ROOTS = 0,  ///< Ноль корней у уравнения
