@@ -11,6 +11,9 @@ void input_coef(double* a, double* b, double* c)
     assert(a != NULL);
     assert(b != NULL);
     assert(c != NULL);
+    assert(a != b);
+    assert(b != c);
+    assert(c != a);
     /**
         \brief Переменная, которая принимает возвращаемо значение функции scanf()
         в функции input_coef()
@@ -24,7 +27,7 @@ void input_coef(double* a, double* b, double* c)
         ret_scanf = scanf("%lg %lg %lg", a, b, c);
         int symbol = getchar();
         while (symbol != '\n') {
-            if (symbol > 57 || symbol < 48) {
+            if (symbol > ((int) '9') || symbol < ((int) '0')) {
                 ret_scanf = 0;
             }
             symbol = getchar();
@@ -39,6 +42,7 @@ NUM_OF_ROOTS SolveSquareEq(double a, double b, double c, double* x1, double* x2)
     assert(isfinite(a) != 0);
     assert(isfinite(b) != 0);
     assert(isfinite(c) != 0);
+    assert(x1 != x2);
     assert(x1 != NULL);
     assert(x2 != NULL);
 

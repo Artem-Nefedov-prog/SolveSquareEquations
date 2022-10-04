@@ -33,8 +33,8 @@ int main()
 
     TestProgram(0, 0, 0, 0, 0, INF_ROOTS);
 
-    printf("%d\n", TestProgram(0, 0, 0, 0, 0, INF_ROOTS));
-    printf("%d\n", AllTestForProgram());
+    printf("Correctly executed %d/1\n", TestProgram(0, 0, 0, 0, 0, INF_ROOTS));
+    printf("Correctly executed %d/10\n", AllTestForProgram());
 
     return 0;
 }
